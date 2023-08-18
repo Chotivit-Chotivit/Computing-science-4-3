@@ -1,1 +1,53 @@
+# Selection sort in Python
+
+
+def selectionSort(array, size):
+   
+    for step in range(size):
+        min_idx = step
+
+        for i in range(step + 1, size):
+         
+           
+            if array[i] < array[min_idx]:
+                min_idx = i
+         
+        
+        (array[step], array[min_idx]) = (array[min_idx], array[step])
+
+
+data = [22,12,45,67,89,23,76,93,55,26]
+size = len(data)
+selectionSort(data, size)
+print('Sorted Array in Ascending Order:')
+print(data)
+
+class Solution:
+
+    def solve(self, nums):
+        sort_seq = sorted(nums)
+        table = {}
+
+        for i, n in enumerate(nums):
+            table[n] = i
+
+        swaps = 0
+        for i in range(len(nums)):
+            n = nums[i]
+            s_n = sort_seq[i]
+            s_i = table[s_n]
+
+            if s_n != n:
+                swaps += 1
+                nums[s_i] = n
+                nums[i] = s_n
+                table[n] = s_i
+                table[s_n] = i
+
+        return swaps
+
+
+ob = Solution()
+nums = [22,12,45,67,89,23,76,93,55,26]
+print(ob.solve(nums))
 
