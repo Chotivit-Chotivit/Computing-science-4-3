@@ -16,7 +16,7 @@ def selectionSort(array, size):
         (array[step], array[min_idx]) = (array[min_idx], array[step])
 
 
-data = [22,12,45,67,89,23,76,93,55,26]
+data = [ข้อมูลที่จำนำมาจัดเรียง]
 size = len(data)
 selectionSort(data, size)
 print('Sorted Array in Ascending Order:')
@@ -48,6 +48,6 @@ class Solution:
 
 
 ob = Solution()
-nums = [22,12,45,67,89,23,76,93,55,26]
+nums = [นำข้อมูลที่จัดเรียกมานำจำนวนครั้งในการจัดเรียง]
 print(ob.solve(nums))
 
